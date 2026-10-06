@@ -2,3 +2,4 @@
 2. Izkušnje z gitom: malo
 3. Koliko mi je všeč git (1-10): 0
 4. zakaj? zato
+4. zakaj? zaradi ustreznega razloga
