@@ -19,7 +19,6 @@ def nalozi_studente(pot):
 
 
 def zapisi_studente(pot, studenti):
-    studenti = []
     with open(pot, "w", encoding="utf-8") as file:
         pisec = DictWriter(file, fieldnames=["Ime", "Program", "Letnik", "Stopnja"])
 

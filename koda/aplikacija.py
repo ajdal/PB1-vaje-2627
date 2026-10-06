@@ -35,6 +35,7 @@ def main():
 
     nov_student = Student(ime, program, letnik, stopnja)
     studenti.append(nov_student)
+    zapisi_studente("koda/studenti.csv", studenti)
 
     print("Pozdravljen svet!")
     print()
