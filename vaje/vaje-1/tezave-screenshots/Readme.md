@@ -1,0 +1,1 @@
+Sem dodajte posnetek zaslona težave, na katero ste naleteli. Sliko poimenujte `tezava<st>` in jo vstavite v dokument `navodila.md`.
