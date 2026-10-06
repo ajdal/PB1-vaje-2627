@@ -1,4 +1,5 @@
 from delo_s_podatki import nalozi_studente, zapisi_studente
+from model import Student
 
 def izpisi_studente(studenti):
     for student in studenti:
@@ -27,6 +28,14 @@ def studenti_na_programu(studenti, program):
 
 def main():
     studenti = nalozi_studente("koda/studenti.csv")
+    ime = input("Ime: ")
+    program = input("Program: ")
+    letnik = int(input("Letnik: "))
+    stopnja = input("Stopnja: ")
+
+    nov_student = Student(ime, program, letnik, stopnja)
+    studenti.append(nov_student)
+    zapisi_studente("koda/studenti.csv", studenti)
 
     print("Pozdravljen svet!")
     print()
