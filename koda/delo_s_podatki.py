@@ -11,6 +11,7 @@ def nalozi_studente(pot):
                 vrstica["Ime"],
                 vrstica["Program"],
                 int(vrstica["Letnik"]),
+                vrstica["Stopnja"],
             )
             studenti.append(student)
 
