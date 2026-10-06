@@ -32,7 +32,12 @@ Ključ dodamo na uporabniški račun s primernim imenom (npr. `osebni-racunalnik
 
 Vaje bomo izvajali vodeno in sočasno (prosim, ne prehitevajte), da lahko skupaj obdelamo najpogostejše scenarije dela z gitom.
 
-V okviru teh vaj bomo na repozitoriju naredili popoln kaos (ker nas je ogromno in vsi delamo hkrati!) in stvari bodo verjetno šle narobe - ampak jih bomo rešili. Upam, da bodo vse težave, na katerem naletite pri delu v parih na seminarski nalogi, v primerjavi s tem minimalne.
+Opomba: V okviru teh vaj bomo na repozitoriju naredili popoln kaos (ker nas je ogromno in vsi delamo hkrati!) in stvari bodo verjetno šle narobe. 
+
+Glavni cilji vaj:
+* Ponoviti najpogostejše akcije na gitu.
+* Preiskusiti, kako poteka sočasno delo več ljudi na istem projektu.
+* Najti čim več možnih težav in pripraviti scenarije reševanja, da bo pri delu na seminarskih nalogah (kjer bosta sodelovala le po dva in bo usklajevanja precej manj) večina težav že znanih. Če vseeno naletite na še kakšno, jo dodajte v zadnji sklop.
 
 
 ### Za dostop
@@ -89,4 +94,4 @@ Sem bomo (verjetno) dodali uporabne ukaze za delo z gitom (in posnetke zaslona z
 
 ## 4. Git prva pomoč
 
-Če se vam pojavi kakšna (predvsem nepričakovana) težava, naredite posnetek zaslona in ga dodajte v imenik `tezave-screenshots` in jo vključite v tem dokumentu (glej zgled). Če težave niste znali rešiti sami, ustvarite Issue. To velja tudi za vse nadaljnje delo z Gitom.
+Če se vam pojavi kakšna (predvsem nepričakovana) težava, naredite posnetek zaslona in ga dodajte v imenik `tezave-screenshots` in jo vključite v tem dokumentu (glej zgled). Če ste težavo rešili, napišite, kako, sicer pa ustvarite Issue. To velja tudi za vse nadaljnje delo z Gitom.
