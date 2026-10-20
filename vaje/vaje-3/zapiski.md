@@ -1,8 +1,6 @@
-# Združevanje in podpoizvedbe
+# Združevanje
 
-## Združevanje
-
-### Primeri z bazo `filmi`:
+### Primeri z bazo `filmi ena tabela`:
 
 1. Poiščimo skupno dolžino in število vseh filmov v tabeli `film`.
 
