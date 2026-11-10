@@ -44,3 +44,33 @@ Opombe (za SQLite):
 * Določilo `PRIMARY KEY` vključuje določili `NOT NULL` in `UNIQUE`. Če gre za celoštevilski primarni ključ (`INTEGER`) avtomatsko poskrbi za prirejanje/povečevanje vrednosti, zato določilo `AUTOINCREMENT` za celoševilske primarne ključe ni potrebno. ([več o tem](https://www.sqlitetutorial.net/sqlite-primary-key/))
 * Določili `FOREIGN KEY` in `REFERENCES` dovoljujeta manjkajoče vrednosti. Če jih želimo prepovedati, je potrebno dodati še `NOT NULL`.
 * Če se tuji ključi (oz. njihove omejitve) ne obnašajo pravilno, je morda treba vključiti delo s tujimi ključi: `PRAGMA foreign_keys = ON`.
+
+
+**Primer:**
+
+Želimo ustvariti tabelo knjiga, ki bo predstavljala knjigo v knjižnici modernih knjig. Knjiga mora imeti naslov, leto izida mora biti med 1900 in 2026. Datum vnosa predstavimo kot besedilo oblike `YYYY-MM-DD hh:mm:ss`
+
+```sql
+CREATE TABLE knjiga (
+  id INTEGER PRIMARY KEY,
+  naslov TEXT NOT NULL,
+  leto INTEGER CHECK (leto BETWEEN 1900 AND 2026),
+  datum_vnosa TEXT DEFAULT CURRENT_TIMESTAMP,
+  id_avtor INTEGER REFERENCES avtor(id) NOT NULL,
+UNIQUE (naslov, leto, id_avtor)
+);
+```
+
+Če smo tabelo že ustvarili in jo želimo spremeniti, imamo dve možnosti (odvisno od sprememb, ki jih želimo narediti):
+1. Sprememba lastnosti tabele z `ALTER TABLE`.
+
+TODO primer
+
+2. Tabelo izbrišemo in ponovno ustvarimo.
+
+Izvedemo ukaz `DROP TABLE <ime_tabele>`. V izogib napakam, ko tabela še ni ustvarjena, v skripte lahko dodamo pogojni izbris samo, če tabela že obstaja: 
+```sql
+DROP TABLE IF EXISTS knjiga;
+```
+
+**Pozor**: Ko tabela že vsebuje podatke, moramo pri ukazu `DROP TABLE` paziti, da podatkov ne izgubimo.
