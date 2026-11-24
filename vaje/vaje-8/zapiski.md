@@ -1,4 +1,4 @@
-a# Načrtovanje podatkovnih baz
+# Načrtovanje podatkovnih baz
 
 Okviren postopek načrtovanja podatkovne baze:
 
@@ -49,8 +49,14 @@ Na podlagi opisa pripravite predlog podatkovnega modela, ki bi knjižnici omogo�
 
 **Vprašanja:**
 1. Katere funkcionalnosti mora podpirati sistem?
-2. Katere informacije bi morali shraniti, da bi lahko odgovorili na vprašanja zaposlenih?
+- vpis člana
+- izposoja in vračilo knjige
+- pregled izposojenih knjig
+- pregled preteklih izposoj
+- iskanje po avtorju
 
+2. Katere informacije bi morali shraniti, da bi lahko odgovorili na vprašanja zaposlenih?
+- člani, knjige, izvodi, čas izposoje in vračila, avtorji
 
 
 ### Identifikacija entitetnih tipov in atributov
@@ -72,6 +78,17 @@ Pri izbiri identifikatorja upoštevamo:
 - identifikator mora enolično določati posamezno entiteto;
 - identifikator ne sme biti odvisen od podatkov, ki se lahko pogosto spreminjajo;
 - po možnosti izberemo preprost in stabilen identifikator.
+
+V knjižnici:
+
+Član: ime, priimek, identifikator, kontakt, št_izposojenih
+    - kandidati za id: 1...n; članska številka
+Knjiga: naslov, avtor, identifikator
+    - kandidati za id: 1...n; ISBN
+Izvod: identifikator, knjiga, status
+Izposoja: član, izvod, čas izposoje, čas vračila
+    - id 1...n
+
 
 
 ### Identifikacija relacij in števnosti
