@@ -108,6 +108,24 @@ WHERE id IN (
     );
 ```
 
+| predmeti.id | ime                        | smer  |
+|-------------|----------------------------|-------|
+| 887         | Seminar                    | 1FiMa |
+| 890         | Diplomski seminar          | 1FiMa |
+| 902         | Monetarna ekonomija        | 1FiMa |
+| 927         | Komuniciranje v matematiki | 1PrMa |
+| 936         | Seminar                    | 1Mate |
+| 944         | Diplomski seminar          | 1Mate |
+| 999         | Praktično usposabljanje    | 1PrMa |
+| 1011        | Matematični seminar        | 2Mate |
+| 1074        | Delovna praksa 1           | 2Mate |
+| 1160        | IŠRM seminar               | 2ISRM |
+| 1221        | Pedagoška praksa 1         | 2PeMa |
+| 1230        | Didaktika matematike 1     | 2PeMa |
+| 1232        | Seminar 1                  | 2PeMa |
+| 1233        | Seminar 2                  | 2PeMa |
+
+
 Če smo suvereni z uporabo ukaza `WITH`, lahko ekvivalenten rezultat dosežemo tudi tako, da z WITH ustvarimo dve začasni "tabeli", na kateri se potem sklicujemo v poenostavljeni glavni poizvedbi:
 
 ```sql
@@ -140,23 +158,6 @@ HAVING
     SUM(CASE WHEN tip = 'S' THEN 1 ELSE 0 END) > 0 
     AND SUM(CASE WHEN tip IN ('V', 'L') THEN 1 ELSE 0 END) = 0;
 ```
-
-| predmeti.id | ime                        | smer  |
-|-------------|----------------------------|-------|
-| 887         | Seminar                    | 1FiMa |
-| 890         | Diplomski seminar          | 1FiMa |
-| 902         | Monetarna ekonomija        | 1FiMa |
-| 927         | Komuniciranje v matematiki | 1PrMa |
-| 936         | Seminar                    | 1Mate |
-| 944         | Diplomski seminar          | 1Mate |
-| 999         | Praktično usposabljanje    | 1PrMa |
-| 1011        | Matematični seminar        | 2Mate |
-| 1074        | Delovna praksa 1           | 2Mate |
-| 1160        | IŠRM seminar               | 2ISRM |
-| 1221        | Pedagoška praksa 1         | 2PeMa |
-| 1230        | Didaktika matematike 1     | 2PeMa |
-| 1232        | Seminar 1                  | 2PeMa |
-| 1233        | Seminar 2                  | 2PeMa |
 
 
 **Kaj se dogaja?** \
